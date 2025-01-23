@@ -18,14 +18,12 @@ const Main = () => {
     
 
     useEffect(fetchDataAPI, [ ])
-    
-    console.log (posts);
 
   return (
     <main>
       <div className="container my-5">
         <div className="row">
-          {/* {posts.map(post => (<Card key={post.id} />))} */}
+          {posts.map(post => (<Card key={post.id} post={post} />))}
         </div>
       </div>
     </main>
