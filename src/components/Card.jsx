@@ -5,9 +5,9 @@ const Card = (props) => {
   return (
     <div className="col-12 col-md-4">
       <div className="card mb-4">
-        <img className="my-3" src={props.image} alt={props.title} />
-        <h4 className="my-3">{props.title}</h4>
-        <p className="my-3">{props.content}</p>
+        <img className="my-3" src={posts.image} alt={posts.title} />
+        <h4 className="my-3">{posts.title}</h4>
+        <p className="my-3">{posts.content}</p>
       </div>
     </div>
   )

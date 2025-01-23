@@ -6,21 +6,20 @@ const Main = () => {
 
   const baseAPI = 'http://localhost:3000'
 
-  const [posts, setPosts] = useState()
+  const [posts, setPosts] = useState([])
 
   function fetchDataAPI(){
     axios.get(`${baseAPI}/posts`)
       .then(res =>{
-        const postsArray = res.data
-        console.log(postsArray);
-        setPosts(postsArray)
-        
+        setPosts(res.data)
       })
-
+      
   }
     
-    useEffect(fetchDataAPI, [])
-  
+
+    useEffect(fetchDataAPI, [ ])
+    
+    console.log (posts);
 
   return (
     <main>
